@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 
 import { Provider } from "@/components/ui/provider";
 import { ColorModeButton } from "@/components/ui/color-mode";
+import { DefaultLayout } from "@/components/layouts";
 
 import "./globals.css";
 
@@ -32,7 +33,7 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
-          {children}
+          <DefaultLayout>{children}</DefaultLayout>
 
           <ColorModeButton className="color-switch" />
         </Provider>
